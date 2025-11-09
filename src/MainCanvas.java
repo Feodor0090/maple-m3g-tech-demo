@@ -48,6 +48,11 @@ public class MainCanvas extends GameCanvas implements Runnable {
 			running = false;
 	}
 
+	protected void pointerPressed(int x, int y) {
+		if (y < 100)
+			running = false;
+	}
+
 	private void load() throws IOException {
 		bgImage = new Image2D(Image2D.RGB, Image.createImage("/bg.png"));
 		bg = new Background();
