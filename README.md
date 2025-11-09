@@ -1,2 +1,9 @@
-# maple-m3g-tech-demo
-Semi-successfl attempt to port E-Mote model to M3G.
+# Maple M3G tech demo
+
+Технодемка, показывающая что E-Mote модели в сильно урезанном и убитом виде но возможно портировать на M3G.
+
+Использован код из https://github.com/rmn20/l2d_m3g/
+
+Права на модель Мэпл и её графические элементы принадлежат `NEKO WORKs`
+
+![result](ss.jpg)
