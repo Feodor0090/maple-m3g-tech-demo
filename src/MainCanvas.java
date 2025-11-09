@@ -110,11 +110,24 @@ public class MainCanvas extends GameCanvas implements Runnable {
 
 	public void run() {
 		try {
+			long time = System.currentTimeMillis();
 			load();
+			long loadTime = System.currentTimeMillis() - time;
+			Thread.yield();
+			time = System.currentTimeMillis();
+			int frames = 0;
 			while (running) {
 				Pass();
+				frames++;
 			}
-			midlet.notifyDestroyed();
+			if(frames == 0)
+				midlet.notifyDestroyed();
+			Form f = new Form("Results");
+			f.append("Load time: " + loadTime + "ms\n");
+			f.append("Total frames: " + frames + "\n");
+			long frameTime = ((System.currentTimeMillis() - time) / frames);
+			f.append("Avg frame time: " + frameTime + "ms\n");
+			Display.getDisplay(midlet).setCurrent(f);
 		} catch (Throwable e) {
 			e.printStackTrace();
 			Form f = new Form("");
