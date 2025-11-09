@@ -6,6 +6,6 @@
 
 Права на модель Мэпл и её графические элементы принадлежат `NEKO WORKs`
 
-Пояснение: https://t.me/sym_ansel_dev/50
+Пояснение: https://t.me/sym_ansel_dev/48
 
 ![result](ss.jpg)
