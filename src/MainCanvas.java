@@ -61,7 +61,18 @@ public class MainCanvas extends GameCanvas implements Runnable {
 		bg.setColor(0xffffffff);
 		bg.setImage(bgImage);
 
-		mapleBody = new Image2D(Image2D.RGBA, Image.createImage("/tex1024.png"));
+		String imgName;
+		Integer maxTexSize = (Integer) Graphics3D.getProperties().get("maxTextureDimension");
+		if (maxTexSize.intValue() >= 2048)
+			imgName = "/tex2048.png";
+		else if (maxTexSize.intValue() >= 1024)
+			imgName = "/tex1024.png";
+		else if (maxTexSize.intValue() >= 512)
+			imgName = "/tex512.png";
+		else
+			throw new RuntimeException("No texture for size: " + maxTexSize.intValue());
+
+		mapleBody = new Image2D(Image2D.RGBA, Image.createImage(imgName));
 		MeshData l2dData = MeshData.loadMeshes3D2("/Maple6.3d2", mapleBody, 1, false, true)[0];
 		mapleMesh = (SkinnedMesh) l2dData.getM3GMesh();
 		mapleRoot = new Transform();
@@ -120,7 +131,7 @@ public class MainCanvas extends GameCanvas implements Runnable {
 				Pass();
 				frames++;
 			}
-			if(frames == 0)
+			if (frames == 0)
 				midlet.notifyDestroyed();
 			Form f = new Form("Results");
 			f.append("Load time: " + loadTime + "ms\n");
