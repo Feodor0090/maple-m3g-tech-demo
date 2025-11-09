@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Vendor: Ansel Hayashi
+MIDlet-Version: 1.0.0
+MIDlet-Name: Maple tech demo
+MIDlet-1: Maple tech demo,,Main
+Nokia-MIDlet-On-Screen-Keypad: no
