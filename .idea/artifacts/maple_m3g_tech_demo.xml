@@ -1,11 +1,11 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="maple-tech-demo">
+  <artifact type="jar" name="maple-m3g-tech-demo">
     <output-path>$PROJECT_DIR$/deployed/raw</output-path>
-    <root id="archive" name="maple-tech-demo.jar">
+    <root id="archive" name="maple-m3g-tech-demo.jar">
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
       </element>
-      <element id="module-output" name="maple-tech-demo" />
+      <element id="module-output" name="maple-m3g-tech-demo" />
     </root>
   </artifact>
 </component>
